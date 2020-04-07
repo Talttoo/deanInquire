@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.julong.deanInquire.mapper.DeanDailyMapper">
+
+    <resultMap id="dept" type="com.julong.deanInquire.dto.entity.item.DepartmentDTO" >
+        <result column="deptId" property="DEPTID" jdbcType="NUMBER" />
+        <result column="deptCode" property="DEPTCODE" jdbcType="VARCHAR" />
+        <result column="deptName" property="DEPTNAME" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <select id="findDept" resultType="dept">
+        select DISTINCT
+	    a.DEPTID ,
+	    a.DEPTCODE ,
+	    a.DEPTNAME
+        from OM_DEPARTMENT a ,
+	    OM_DEPARTMENTVISIT b
+        where a.DEPTID = b.DEPTID and
+	    a.ISDELETE = '0' and
+	    (b.VISITTYPE = 1 or b.VISITTYPE = 2)
+        order by a.DEPTCODE;
+    </select>
+</mapper>
+
