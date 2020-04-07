@@ -254,46 +254,6 @@ public class UtilsController {
 
     }
 
-//
-//    @GetMapping("/utils/stockInPram")
-//    public String getStockInPram(){
-//        System.out.println("请求获取库存查询参数");
-//        // 创建实例
-//        ReturnTwoParameterModel returnParameterModel = new ReturnTwoParameterModel();
-//        // 返回的参数
-//
-//        List<DepartmentDTO> deptList = utilsMapper.getDrugDept();
-//
-//        List<DrugDTO> drugList = utilsMapper.getDrug(locId);
-//
-//        String str1=JSON.toJSONString(prescriptionClassificationList);
-//        String str2=JSON.toJSONString(deptList);
-//        String str3=JSON.toJSONString(docList);
-//
-//        // 返回code
-//        returnParameterModel.setStatusCode(200);
-//
-//        // 转为JSONArray
-//        JSONArray jsonArray= JSONArray.parseArray(str1);
-//        JSONArray jsonArray2= JSONArray.parseArray(str2);
-//        JSONArray jsonArray3= JSONArray.parseArray(str3);
-//
-//        // 传入模型
-//        returnParameterModel.setData(jsonArray);
-//        returnParameterModel.setData_2(jsonArray2);
-//
-//
-//        // 返回errMsg
-//        returnParameterModel.setErrMsg("success");
-//        // 返回前端
-//        String restr = JSON.toJSONString(returnParameterModel);
-//        System.out.println(restr);
-//        return restr;
-//
-//
-//
-//    }
-
 
 
 
