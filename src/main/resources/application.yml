@@ -2,12 +2,12 @@ spring:
 
   datasource:
     driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@10.53.86.200:1521:orcl
-    username: hyhis
-    password: hyhis
-#    url: jdbc:oracle:thin:@localhost:1521:orcl
-#    username: JAFY
-#    password: JAFY
+#    url: jdbc:oracle:thin:@10.53.86.200:1521:orcl
+#    username: hyhis
+#    password: hyhis
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: JAFY
+    password: JAFY
 
 #  redis:
 #    host: 127.0.0.1
